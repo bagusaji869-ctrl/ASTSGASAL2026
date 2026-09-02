@@ -370,6 +370,45 @@
         timerInterval = setInterval(update, 1000);
     }
 </script>
+<!-- KODE LAIN SEBELUMNYA ... -->
 
+    <script>
+        const SECRET_KEY = 5791;
+        const PIN_PENGAWAS = "1234";
+        let timerInterval = null;
+
+        // =========================================================
+        // TEMPATKAN SKRIP ANTI-NYONTEK DI SINI (BAGIAN ATAS/BEBAS)
+        // =========================================================
+        let jumlahKabur = 0;
+        const batasKabur = 3; // Toleransi maksimal 3 kali keluar aplikasi
+
+        document.addEventListener("visibilitychange", function() {
+            // Hanya jalankan deteksi jika siswa sudah masuk ke menu ujian/sedang buka gform
+            const gformDisplay = document.getElementById('gformSection').style.display;
+            const menuDisplay = document.getElementById('menuSection').style.display;
+
+            if (document.hidden && (gformDisplay === 'flex' || menuDisplay === 'block')) {
+                jumlahKabur++;
+                
+                if (jumlahKabur >= batasKabur) {
+                    alert("Ujian Dibatalkan! Anda terdeteksi keluar dari aplikasi ujian sebanyak " + batasKabur + " kali.");
+                    keluarDariSoal(); // Mengeluarkan siswa dari soal & kembali ke login
+                } else {
+                    alert("PERINGATAN (" + jumlahKabur + "/" + batasKabur + ")!\n\nDilarang meninggalkan layar ujian atau membuka aplikasi lain!");
+                }
+            }
+        });
+        // =========================================================
+
+        function generate15MinToken() {
+            // ... kode fungsi lainnya tetap sama ...
+        }
+
+        // KODE JAVASCRIPT LAINNYA DASAR PORTAL ANDA...
+    </script>
+
+</body>
+</html>
 </body>
 </html>
