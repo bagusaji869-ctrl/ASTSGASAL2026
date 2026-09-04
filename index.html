@@ -131,6 +131,19 @@
         .token-val { font-size: 32px; font-weight: 800; color: #1e3a8a; letter-spacing: 4px; margin: 5px 0; }
         .timer { font-size: 11px; color: #64748b; font-weight: 600; }
 
+        /* PESAN DILUAR JADWAL UJIAN */
+        .no-schedule-msg {
+            background: #fffbebf8;
+            border: 1px solid #fef3c7;
+            color: #b45309;
+            padding: 18px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
         #gformSection {
             position: fixed;
             top: 0;
@@ -179,7 +192,7 @@
         <div id="loginSection" class="card">
             <div class="header">
                 <!-- LOGO SEKOLAH DITAMBAHKAN DI SINI -->
-                <img src="images.jpg" alt="Logo SMKN 5 Yogyakarta" class="school-logo">
+                <img src="logo.png" alt="Logo SMKN 5 Yogyakarta" class="school-logo">
                 
                 <h2>ASTS SMKN 5 Yogyakarta</h2>
                 <p>Masukkan Token Ujian Sesi 15-Menit</p>
@@ -216,39 +229,67 @@
             </div>
 
             <div class="menu-list">
-                 <!-- MAPEL 1 -->
-                <div class="item-card">
-                    <div class="item-title">Bahasa Indonesia</div>
-                    <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                    <button onclick="bukaGForm('https://forms.gle/ss7XVDMc2yfcmaVs8')" class="btn-gform">Kerjakan Soal</button>
+                <!-- KELAS X (07.15 - 10.30) -->
+                <div id="kelasXSection" style="display: none;">
+                    <div class="item-card">
+                        <div class="item-title">Bahasa Indonesia X</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/ss7XVDMc2yfcmaVs8')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Islam X</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/NfuSRW7YhTanBt3u7')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Kristen X</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/zjUNQ2urd1AejCueA')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Katolik X</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/mnERgPpQu6Y4qLjA6')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Hindu X</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/UtA1TaZvpTyfxTfz5')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
                 </div>
 
-                <!-- MAPEL 2 -->
-                <div class="item-card">
-                    <div class="item-title">PA Islam</div>
-                    <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                    <button onclick="bukaGForm('https://forms.gle/NfuSRW7YhTanBt3u7')" class="btn-gform">Kerjakan Soal</button>
+                <!-- KELAS XI (10.45 - 14.00) -->
+                <div id="kelasXISection" style="display: none;">
+                    <div class="item-card">
+                        <div class="item-title">Bahasa Indonesia XI</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/ss7XVDMc2yfcmaVs8')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Islam XI</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/NfuSRW7YhTanBt3u7')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Kristen XI</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/zjUNQ2urd1AejCueA')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Katolik XI</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/mnERgPpQu6Y4qLjA6')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-title">PA Hindu XI</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/UtA1TaZvpTyfxTfz5')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
                 </div>
 
-                <!-- MAPEL 3 -->
-                <div class="item-card">
-                    <div class="item-title">PA Kristen</div>
-                    <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                    <button onclick="bukaGForm('https://forms.gle/zjUNQ2urd1AejCueA')" class="btn-gform">Kerjakan Soal</button>
-                </div>
-
-                <!-- MAPEL 4 -->
-                <div class="item-card">
-                    <div class="item-title">PA Katolik</div>
-                    <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                    <button onclick="bukaGForm('https://forms.gle/mnERgPpQu6Y4qLjA6')" class="btn-gform">Kerjakan Soal</button>
-                </div>
-
-                <!-- MAPEL 5 -->
-                <div class="item-card">
-                    <div class="item-title">PA Hindu</div>
-                    <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                    <button onclick="bukaGForm('https://forms.gle/UtA1TaZvpTyfxTfz5')" class="btn-gform">Kerjakan Soal</button>
+                <!-- PESAN DILUAR JADWAL -->
+                <div id="noScheduleSection" class="no-schedule-msg" style="display: none;">
+                    Tidak ada jadwal ujian kali ini, ikuti ujian sesuai waktu yang dijadwalkan sekolah !
                 </div>
             </div>
         </div>
@@ -312,6 +353,35 @@
         return "K5-" + String(hashCode).padStart(4, '0');
     }
 
+    function renderMenuSchedule() {
+        const now = new Date();
+        const menitSekarang = (now.getHours() * 60) + now.getMinutes();
+
+        // Konversi jam ke total menit:
+        // 07:15 = 435 menit, 10:30 = 630 menit
+        // 10:45 = 645 menit, 14:00 = 840 menit
+        const kXStart = (7 * 60) + 15;
+        const kXEnd = (10 * 60) + 30;
+        const kXIStart = (10 * 60) + 45;
+        const kXIEnd = (14 * 60) + 0;
+
+        const secX = document.getElementById('kelasXSection');
+        const secXI = document.getElementById('kelasXISection');
+        const secNo = document.getElementById('noScheduleSection');
+
+        secX.style.display = 'none';
+        secXI.style.display = 'none';
+        secNo.style.display = 'none';
+
+        if (menitSekarang >= kXStart && menitSekarang <= kXEnd) {
+            secX.style.display = 'block';
+        } else if (menitSekarang >= kXIStart && menitSekarang <= kXIEnd) {
+            secXI.style.display = 'block';
+        } else {
+            secNo.style.display = 'block';
+        }
+    }
+
     function switchTab(target) {
         document.getElementById('loginSection').style.display = 'none';
         document.getElementById('menuSection').style.display = 'none';
@@ -322,6 +392,7 @@
             document.getElementById('loginSection').style.display = 'block';
             clearInterval(timerInterval);
         } else if (target === 'menu') {
+            renderMenuSchedule();
             document.getElementById('menuSection').style.display = 'block';
         } else if (target === 'pengawas') {
             document.getElementById('pengawasSection').style.display = 'block';
