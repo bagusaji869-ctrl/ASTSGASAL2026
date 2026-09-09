@@ -184,7 +184,7 @@
         <!-- 1. HALAMAN UTAMA / LOGIN SISWA -->
         <div id="loginSection" class="card">
             <div class="header">
-                <img src="images.jpg" alt="Logo SMKN 5 Yogyakarta" class="school-logo">
+                <img src="logo.png" alt="Logo SMKN 5 Yogyakarta" class="school-logo">
                 <h2>ASTS SMKN 5 Yogyakarta</h2>
                 <p>Masukkan Token Ujian Sesi 15-Menit</p>
             </div>
@@ -215,54 +215,33 @@
             </div>
 
             <div class="menu-list">
-                <!-- KELAS XII (07.30 - 12.00) -->
-                <div id="kelasXIISection" style="display: none;">
-                   <div class="item-card">
-                        <div class="item-title">Matematika XII</div>
+                <!-- KELAS X (07.15 - 10.30) -->
+                <div id="kelasXSection" style="display: none;">
+                    <div class="item-card">
+                        <div class="item-title">Penjasorkes X</div>
                         <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/q5AhkQhnzGX6soqY9')" class="btn-gform">Kerjakan Soal</button>
+                        <button onclick="bukaGForm('https://forms.gle/gfoWM1aCy4VCj4WHA')" class="btn-gform">Kerjakan Soal</button>
                     </div>
 
                     <div class="item-card">
-                        <div class="item-title">Prkdk DKV XII</div>
+                        <div class="item-title">Sejarah Indonesia X</div>
                         <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/5EAQ1Po6URyAuuDa9')" class="btn-gform">Kerjakan Soal</button>
+                        <button onclick="bukaGForm('https://forms.gle/zGgpsPz6SgGuNSYt7')" class="btn-gform">Kerjakan Soal</button>
+                    </div>
+                </div>
+
+                <!-- KELAS XI (10.45 - 14.00) -->
+                <div id="kelasXISection" style="display: none;">
+                    <div class="item-card">
+                        <div class="item-title">Penjasorkes XI</div>
+                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
+                        <button onclick="bukaGForm('https://forms.gle/t5bc4f4prfBhJrs77')" class="btn-gform">Kerjakan Soal</button>
                     </div>
 
                     <div class="item-card">
-                        <div class="item-title">Prkdk Animasi XII</div>
+                        <div class="item-title">Sejarah Indonesia XI</div>
                         <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/vSgaHFfyaYHWjVix6')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Prkdk Logam XII</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/p8CTTqRFsYFAX6bY6')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Prkdk Kulit XII</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/vCNeEXTejEYzAADd7')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Prkdk Kayu XII</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/bqkZTTQmR6Lj3svF7')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Prkdk Keramik XII</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/usLdNvDvMefAZ5CZ6')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Prkdk Tekstil XII</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/ofh91bakG14RNfNi9')" class="btn-gform">Kerjakan Soal</button>
+                        <button onclick="bukaGForm('https://forms.gle/q42YFBsa6JDw4Zvb6')" class="btn-gform">Kerjakan Soal</button>
                     </div>
                 </div>
 
@@ -288,7 +267,7 @@
 <script>
     const SECRET_KEY = 5791;
 
-    // Wake Lock API untuk layar tetap aktif
+    // Wake Lock API untuk menjaga layar tetap menyala
     let wakeLock = null;
 
     async function requestWakeLock() {
@@ -312,7 +291,7 @@
         }
     }
 
-    // Sistem Anti-Kecurangan
+    // Anti-Kecurangan: Deteksi perpindahan layar
     let jumlahKabur = 0;
     const batasKabur = 3;
 
@@ -336,6 +315,7 @@
         }
     });
 
+    // Proteksi Klik Kanan dan Shortcut
     document.addEventListener('contextmenu', event => event.preventDefault());
     document.addEventListener('keydown', function(e) {
         if (e.key === 'F12' || 
@@ -347,7 +327,7 @@
         }
     });
 
-    // Algoritma Generator Token Dinamis
+    // Generator Token Dinamis
     function generate15MinToken() {
         const now = new Date();
         const tanggal = now.getDate();
@@ -365,17 +345,23 @@
         const now = new Date();
         const menitSekarang = (now.getHours() * 60) + now.getMinutes();
 
-        const kXIIStart = 450;
-        const kXIIEnd = 720;
+        const kXStart = (7 * 60) + 15;
+        const kXEnd = (10 * 60) + 30;
+        const kXIStart = (10 * 60) + 45;
+        const kXIEnd = (14 * 60) + 0;
 
-        const secXII = document.getElementById('kelasXIISection');
+        const secX = document.getElementById('kelasXSection');
+        const secXI = document.getElementById('kelasXISection');
         const secNo = document.getElementById('noScheduleSection');
 
-        secXII.style.display = 'none';
+        secX.style.display = 'none';
+        secXI.style.display = 'none';
         secNo.style.display = 'none';
 
-        if (menitSekarang >= kXIIStart && menitSekarang <= kXIIEnd) {
-            secXII.style.display = 'block';
+        if (menitSekarang >= kXStart && menitSekarang <= kXEnd) {
+            secX.style.display = 'block';
+        } else if (menitSekarang >= kXIStart && menitSekarang <= kXIEnd) {
+            secXI.style.display = 'block';
         } else {
             secNo.style.display = 'block';
         }
