@@ -215,7 +215,7 @@
             </div>
 
             <div class="menu-list">
-                <!-- KELAS X (07.10 - 10.20) -->
+                <!-- KELAS X (07.15 - 10.40) -->
                 <div id="kelasXSection" style="display: none;">
                     <div class="item-card">
                         <div class="item-title">Bahasa Inggris X</div>
@@ -230,7 +230,7 @@
                     </div>
                 </div>
 
-                <!-- KELAS XI (10.30 - 13.50) -->
+                <!-- KELAS XI (10.45 - 14.10) -->
                 <div id="kelasXISection" style="display: none;">
                     <div class="item-card">
                         <div class="item-title">Bahasa Inggris XI</div>
@@ -377,13 +377,13 @@
         const now = new Date();
         const menitSekarang = (now.getHours() * 60) + now.getMinutes();
 
-        // Kelas X: 07.10 - 10.20
-        const kXStart = (7 * 60) + 10;
-        const kXEnd = (10 * 60) + 20;
+        // Kelas X: 07.15 - 10.40
+        const kXStart = (7 * 60) + 15;
+        const kXEnd = (10 * 60) + 40;
 
-        // Kelas XI: 10.30 - 13.50
-        const kXIStart = (10 * 60) + 30;
-        const kXIEnd = (13 * 60) + 50;
+        // Kelas XI: 10.45 - 14.10
+        const kXIStart = (10 * 60) + 45;
+        const kXIEnd = (14 * 60) + 10;
 
         const secX = document.getElementById('kelasXSection');
         const secXI = document.getElementById('kelasXISection');
