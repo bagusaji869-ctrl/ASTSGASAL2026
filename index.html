@@ -250,87 +250,127 @@
 <script>
     const SECRET_KEY = 5791;
 
-    // SEMUA MATA PELAJARAN DITAMPILKAN LENGKAP TANPA BATASAN JAM
+    // SEMUA MATA PELAJARAN SESUAI TANGGAL DAN JURUSAN
     const jadwalUjian = {
         "2026-09-07": {
             "X": [
-                { id: "x1", title: "Pendidikan Agama dan Budi Pekerti", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
-                { id: "x2", title: "Bahasa Indonesia", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+                { id: "x1", title: "Pendidikan Agama dan Budi Pekerti X", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
+                { id: "x2", title: "Bahasa Indonesia X", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
             ],
             "XI": [
-                { id: "xi1", title: "Pendidikan Agama dan Budi Pekerti", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
-                { id: "xi2", title: "Bahasa Indonesia", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+                { id: "xi1", title: "Pendidikan Agama dan Budi Pekerti XI", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
+                { id: "xi2", title: "Bahasa Indonesia XI", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
             ],
             "XII": [
-                { id: "xii1", title: "Pendidikan Agama dan Budi Pekerti", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
-                { id: "xii2", title: "Bahasa Indonesia", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" }
+                { id: "xii1", title: "Pendidikan Agama dan Budi Pekerti XII", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
+                { id: "xii2", title: "Bahasa Indonesia XII", link: "https://forms.gle/BDzXaghoqpWAazA19" }
             ]
         },
         "2026-09-08": {
             "X": [
-                { id: "x1", title: "Pendidikan Pancasila", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
-                { id: "x2", title: "Bahasa Jawa", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" }
+                { id: "x1", title: "Pendidikan Pancasila X", link: "https://forms.gle/xLBMewKsUUhLW2PH6" },
+                { id: "x2", title: "Bahasa Jawa X", link: "https://forms.gle/iTaNmsgRpM89vGPj9" }
             ],
             "XI": [
-                { id: "xi1", title: "Pendidikan Pancasila", link: "https://forms.gle/VqNrnBr3xqCtMoWeA" },
-                { id: "xi2", title: "Bahasa Jawa", link: "https://forms.gle/jWMXDYgwzfTGkmNW8" }
+                { id: "xi1", title: "Pendidikan Pancasila XI", link: "https://forms.gle/S5ddsbmt78EtbCpF7" },
+                { id: "xi2", title: "Bahasa Jawa XI", link: "https://forms.gle/mKXGr3W13CoAWmgV7" }
             ],
             "XII": [
-                { id: "xii1", title: "Pendidikan Pancasila", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
-                { id: "xii2", title: "Bahasa Jawa", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+                { id: "xii1", title: "Pendidikan Pancasila XII", link: "https://forms.gle/fwYXW2KTgzedrx4N6" },
+                { id: "xii2", title: "Bahasa Jawa XII", link: "https://forms.gle/mNrMRPDvqDUzKzBi9" }
             ]
         },
         "2026-09-09": {
             "X": [
-                { id: "x1", title: "Matematika", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
-                { id: "x2", title: "Seni", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+                { id: "x1", title: "Matematika X", link: "https://forms.gle/9zKjSp8y8p1LBTPu6" },
+                { id: "x2", title: "Seni X", link: "https://forms.gle/hdzSVNogbUWvz2o5A" }
             ],
             "XI": [
-                { id: "xi1", title: "Matematika", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
-                { id: "xi2", title: "Bahasa Jepang", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" }
+                { id: "xi1", title: "Matematika XI", link: "https://forms.gle/r1c7XiiqBawVdrZS6" },
+                { id: "xi2", title: "Jepang XI", link: "https://forms.gle/nSb7yDt6oP6ne1jg7" }
             ],
             "XII": [
-                { id: "xii1", title: "Matematika", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
-                { id: "xii2", title: "Prkdk", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" }
+                { id: "xii1", title: "Matematika XII", link: "https://forms.gle/q5AhkQhnzGX6soqY9" },
+                { id: "xii2", title: "Prkdk DKV XII", link: "https://forms.gle/5EAQ1Po6URyAuuDa9" },
+                { id: "xii3", title: "Prkdk Animasi XII", link: "https://forms.gle/vSgaHFfyaYHWjVix6" },
+                { id: "xii4", title: "Prkdk Logam XII", link: "https://forms.gle/p8CTTqRFsYFAX6bY6" },
+                { id: "xii5", title: "Prkdk Kulit XII", link: "https://forms.gle/vCNeEXTejEYzAADd7" },
+                { id: "xii6", title: "Prkdk Kayu XII", link: "https://forms.gle/bqkZTTQmR6Lj3svF7" },
+                { id: "xii7", title: "Prkdk Keramik XII", link: "https://forms.gle/usLdNvDvMefAZ5CZ6" },
+                { id: "xii8", title: "Prkdk Tekstil XII", link: "https://forms.gle/ofh91bakG14RNfNi9" }
             ]
         },
         "2026-09-10": {
             "X": [
-                { id: "x1", title: "Penjasorkes", link: "https://forms.gle/VqNrnBr3xqCtMoWeA" },
-                { id: "x2", title: "Sejarah Indonesia", link: "https://forms.gle/jWMXDYgwzfTGkmNW8" }
+                { id: "x1", title: "Penjasorkes X", link: "https://forms.gle/gfoWM1aCy4VCj4WHA" },
+                { id: "x2", title: "Sejarah Indonesia X", link: "https://forms.gle/zGgpsPz6SgGuNSYt7" }
             ],
             "XI": [
-                { id: "xi1", title: "Penjasorkes", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
-                { id: "xi2", title: "Sejarah Indonesia", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+                { id: "xi1", title: "Penjasorkes XI", link: "https://forms.gle/t5bc4f4prfBhJrs77" },
+                { id: "xi2", title: "Sejarah Indonesia XI", link: "https://forms.gle/q42YFBsa6JDw4Zvb6" }
             ],
             "XII": [
-                { id: "xii1", title: "Bahasa Inggris", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
-                { id: "xii2", title: "Konsentrasi Kejuruan XII", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+                { id: "xii1", title: "Konsenjur DKV XII", link: "https://forms.gle/csb1wDhiCQ1ABefJA" },
+                { id: "xii2", title: "Konsenjur Animasi XII", link: "https://forms.gle/28uFfikWsK2hFzB78" },
+                { id: "xii3", title: "Konsenjur Logam XII", link: "https://forms.gle/sbHXotN9QptZzp8t7" },
+                { id: "xii4", title: "Konsenjur Kulit XII", link: "https://forms.gle/MW33jJQ3dUMndUGu6" },
+                { id: "xii5", title: "Konsenjur Kayu XII", link: "https://forms.gle/Dr3wjvaksDCf2SLL9" },
+                { id: "xii6", title: "Konsenjur Keramik XII", link: "https://forms.gle/peZvWxAnMJRBnm829" },
+                { id: "xii7", title: "Konsenjur Tekstil XII", link: "https://forms.gle/xCzSsco6Ka2xJzks6" },
+                { id: "xii8", title: "MAPIL DKV XII", link: "https://forms.gle/QnfZdcmQQPqJ6Pv8A" },
+                { id: "xii9", title: "MAPIL Animasi XII", link: "https://forms.gle/xvPsXnFenanWRAWy9" },
+                { id: "xii10", title: "MAPIL Logam XII", link: "https://forms.gle/J4GEvH28LkrMUCvU7" },
+                { id: "xii11", title: "MAPIL Kulit XII", link: "https://forms.gle/eRtPyJdkfKMuvHnL8" },
+                { id: "xii12", title: "MAPIL Kayu XII", link: "https://forms.gle/kUXVynBxU6tBNjFU6" },
+                { id: "xii13", title: "MAPIL Keramik XII", link: "https://forms.gle/pkWkimhsaeAR5mzv9" },
+                { id: "xii14", title: "MAPIL Tekstil XII", link: "https://forms.gle/Lor4wfC2DJXu7NiF8" }
             ]
         },
         "2026-09-11": {
             "X": [
-                { id: "x1", title: "IPAS", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
-                { id: "x2", title: "Dasar Program Keahlian", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" }
+                { id: "x1", title: "IPAS X", link: "https://forms.gle/ZLeiVXm7NK1ghNLW8" },
+                { id: "x2", title: "DASPRO DKV X", link: "https://forms.gle/AsYEcPWa3Po4JYoUA" },
+                { id: "x3", title: "DASPRO Animasi X", link: "https://forms.gle/c4SfHdmdAszgbVsXA" },
+                { id: "x4", title: "DASPRO Logam X", link: "https://forms.gle/3V2tCACeAeg5anTN7" },
+                { id: "x5", title: "DASPRO Kulit X", link: "https://forms.gle/5Uqd8skFL2cc3ary8" },
+                { id: "x6", title: "DASPRO Kayu X", link: "https://forms.gle/ohhw4t3XpHcBLDXj8" },
+                { id: "x7", title: "DASPRO Keramik X", link: "https://forms.gle/PCKPZ8MZDzSTVAsq8" },
+                { id: "x8", title: "DASPRO Tekstil X", link: "https://forms.gle/RoHtTQs2M51sVPjT9" }
             ],
             "XI": [
-                { id: "xi1", title: "Projek Kewirausahaan", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
-                { id: "xi2", title: "Mapel Pilihan", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" }
+                { id: "xi1", title: "Projek Kewirausahaan DKV XI", link: "https://forms.gle/6kLHkYWVLEM344s78" },
+                { id: "xi2", title: "Projek Kewirausahaan Animasi XI", link: "https://forms.gle/hh6pLq4kHhJXiGFd8" },
+                { id: "xi3", title: "Projek Kewirausahaan Logam XI", link: "https://forms.gle/6JJ1UZjZQ8SWDQUv9" },
+                { id: "xi4", title: "Projek Kewirausahaan Kulit XI", link: "https://forms.gle/cjYwVNmQUtguhGDA6" },
+                { id: "xi5", title: "Projek Kewirausahaan Kayu XI", link: "https://forms.gle/ynvcLekNRF9VcMb3A" },
+                { id: "xi6", title: "Projek Kewirausahaan Keramik XI", link: "https://forms.gle/L59JScXbvNXc2qiF8" },
+                { id: "xi7", title: "Projek Kewirausahaan Tekstil XI", link: "https://forms.gle/1M4VEYxZiBmKpEEr5" },
+                { id: "xi8", title: "Mapil DKV XI", link: "https://forms.gle/1h4ErDSBSENhcrrc9" },
+                { id: "xi9", title: "Mapil Animasi XI", link: "https://forms.gle/K3QpAHz3zoGrzmFP6" },
+                { id: "xi10", title: "Mapil Logam XI", link: "https://forms.gle/tGPdqWYBzU8aq3w39" },
+                { id: "xi11", title: "Mapil Kulit XI", link: "https://forms.gle/hUdLraAQwrgtC5749" },
+                { id: "xi12", title: "Mapil Kayu XI", link: "https://forms.gle/5BXYhUfKYS1AE1Mf8" },
+                { id: "xi13", title: "Mapil Keramik XI", link: "https://forms.gle/aMTC9s6zy9k1JD8WA" },
+                { id: "xi14", title: "Mapil Tekstil XI", link: "https://forms.gle/3Y92yQYQXbaW7XYq8" }
             ],
             "XII": []
         },
         "2026-09-14": {
             "X": [
                 { id: "x1", title: "Bahasa Inggris X", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
-                { id: "x2", title: "Informatika & KKA X", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+                { id: "x2", title: "Informatika X", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
             ],
             "XI": [
                 { id: "xi1", title: "Bahasa Inggris XI", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
-                { id: "xi2", title: "Konsentrasi Kejuruan XI (DKV/Animasi/Logam/Kulit/Kayu/Keramik/Tekstil)", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+                { id: "xi2", title: "Konsenjur DKV XI", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" },
+                { id: "xi3", title: "Konsenjur Animasi XI", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
+                { id: "xi4", title: "Konsenjur Logam XI", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" },
+                { id: "xi5", title: "Konsenjur Kulit XI", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
+                { id: "xi6", title: "Konsenjur Kayu XI", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" },
+                { id: "xi7", title: "Konsenjur Keramik XI", link: "https://forms.gle/VqNrnBr3xqCtMoWeA" },
+                { id: "xi8", title: "Konsenjur Tekstil XI", link: "https://forms.gle/jWMXDYgwzfTGkmNW8" }
             ],
-            "XII": [
-                { id: "xii1", title: "Mapil XII", link: "https://forms.gle/ikRek8PnFQqWweHh7" }
-            ]
+            "XII": []
         }
     };
 
