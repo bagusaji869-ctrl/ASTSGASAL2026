@@ -54,17 +54,20 @@
 
         .form-group { margin-bottom: 15px; text-align: left; }
         label { display: block; font-size: 12px; font-weight: 600; color: #334155; margin-bottom: 6px; }
-        input[type="text"] {
+        input[type="text"], select {
             width: 100%;
             padding: 11px;
             border: 1px solid #cbd5e1;
             border-radius: 6px;
-            font-size: 15px;
+            font-size: 14px;
             text-align: center;
+            background-color: #fff;
+        }
+        input[type="text"] {
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-        input:focus { outline: none; border-color: #0d47a1; }
+        input:focus, select:focus { outline: none; border-color: #0d47a1; }
 
         .btn {
             width: 100%;
@@ -104,7 +107,7 @@
             align-items: center;
             text-align: left;
         }
-        .menu-list { max-height: 55vh; overflow-y: auto; padding-right: 4px; }
+        .menu-list { max-height: 48vh; overflow-y: auto; padding-right: 4px; }
         .item-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; margin-bottom: 10px; text-align: left; }
         .item-title { font-size: 14px; font-weight: 700; color: #0d47a1; margin-bottom: 4px; }
         .item-info { font-size: 11px; color: #64748b; margin-bottom: 10px; }
@@ -208,83 +211,27 @@
         <div id="menuSection" class="card">
             <div class="menu-header">
                 <div>
-                    <h1 style="font-size:14px;">Menu Ujian Hari Ini</h1>
+                    <h1 style="font-size:14px;">Menu Ujian Online</h1>
                     <p style="font-size: 10px; color: #93c5fd;">SMKN 5 Yogyakarta</p>
                 </div>
                 <button onclick="logout()" class="btn btn-danger">Keluar</button>
             </div>
 
-            <div class="menu-list">
-                <!-- KELAS X (07.15 - 10.40) -->
-                <div id="kelasXSection" style="display: none;">
-                    <div class="item-card">
-                        <div class="item-title">Bahasa Inggris X</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/Eezv1QYCj5SNi96S7')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
+            <!-- FILTER TANGGAL HARI UJIAN -->
+            <div class="form-group">
+                <label for="selectTanggal">PILIH HARI / TANGGAL UJIAN:</label>
+                <select id="selectTanggal" onchange="renderMenuSchedule()">
+                    <option value="2026-09-07">Senin, 7 September 2026</option>
+                    <option value="2026-09-08">Selasa, 8 September 2026</option>
+                    <option value="2026-09-09">Rabu, 9 September 2026</option>
+                    <option value="2026-09-10">Kamis, 10 September 2026</option>
+                    <option value="2026-09-11">Jumat, 11 September 2026</option>
+                    <option value="2026-09-14">Senin, 14 September 2026</option>
+                </select>
+            </div>
 
-                    <div class="item-card">
-                        <div class="item-title">Informatika X</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/TmEHtTbppR6kGpTb9')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-                </div>
-
-                <!-- KELAS XI (10.45 - 14.10) -->
-                <div id="kelasXISection" style="display: none;">
-                    <div class="item-card">
-                        <div class="item-title">Bahasa Inggris XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/h2Ary1HHNyYAhhDNA')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur DKV XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/m4NqqyHKUYJcV5sz7')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur Animasi XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/ikRek8PnFQqWweHh7')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur Logam XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/GFV9bwXMv1G3gXRm9')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur Kulit XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/A7CBP9NwJc2MZAY17')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur Kayu XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/HG3RRTVgxcwJLZ1C6')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur Keramik XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/VqNrnBr3xqCtMoWeA')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-
-                    <div class="item-card">
-                        <div class="item-title">Konsenjur Tekstil XI</div>
-                        <div class="item-info">Durasi: 90 Menit | 30 PG | 2 Essay</div>
-                        <button onclick="bukaGForm('https://forms.gle/jWMXDYgwzfTGkmNW8')" class="btn-gform">Kerjakan Soal</button>
-                    </div>
-                </div>
-
-                <!-- PESAN DILUAR JADWAL -->
-                <div id="noScheduleSection" class="no-schedule-msg" style="display: none;">
-                    Tidak ada jadwal ujian kali ini, ikuti ujian sesuai waktu yang dijadwalkan sekolah !
-                </div>
+            <div class="menu-list" id="menuListContainer">
+                <!-- Konten Mata Pelajaran Akan Di-generate Secara Dinamis Melalui JavaScript -->
             </div>
         </div>
 
@@ -302,6 +249,88 @@
 
 <script>
     const SECRET_KEY = 5791;
+
+    // DATA JADWAL ASTS SESUAI DOKUMEN PDF JADWAL
+    const jadwalUjian = {
+        "2026-09-07": {
+            "X": [
+                { id: "x1", title: "Pendidikan Agama dan Budi Pekerti", waktu: "Sesi I (07.15 - 08.45)", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
+                { id: "x2", title: "Bahasa Indonesia", waktu: "Sesi II (09.00 - 10.30)", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+            ],
+            "XI": [
+                { id: "xi1", title: "Pendidikan Agama dan Budi Pekerti", waktu: "Sesi III (10.45 - 12.15)", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
+                { id: "xi2", title: "Bahasa Indonesia", waktu: "Sesi IV (12.30 - 14.00)", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+            ],
+            "XII": [
+                { id: "xii1", title: "Pendidikan Agama dan Budi Pekerti", waktu: "Sesi I (07.30 - 09.30)", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
+                { id: "xii2", title: "Bahasa Indonesia", waktu: "Sesi II (10.00 - 12.00)", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" }
+            ]
+        },
+        "2026-09-08": {
+            "X": [
+                { id: "x1", title: "Pendidikan Pancasila", waktu: "Sesi I (07.15 - 08.45)", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
+                { id: "x2", title: "Bahasa Jawa", waktu: "Sesi II (09.00 - 10.30)", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" }
+            ],
+            "XI": [
+                { id: "xi1", title: "Pendidikan Pancasila", waktu: "Sesi III (10.45 - 12.15)", link: "https://forms.gle/VqNrnBr3xqCtMoWeA" },
+                { id: "xi2", title: "Bahasa Jawa", waktu: "Sesi IV (12.30 - 14.00)", link: "https://forms.gle/jWMXDYgwzfTGkmNW8" }
+            ],
+            "XII": [
+                { id: "xii1", title: "Pendidikan Pancasila", waktu: "Sesi I (07.30 - 09.30)", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
+                { id: "xii2", title: "Bahasa Jawa", waktu: "Sesi II (10.00 - 12.00)", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+            ]
+        },
+        "2026-09-09": {
+            "X": [
+                { id: "x1", title: "Matematika", waktu: "Sesi I (07.15 - 08.45)", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
+                { id: "x2", title: "Seni", waktu: "Sesi II (09.00 - 10.30)", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+            ],
+            "XI": [
+                { id: "xi1", title: "Matematika", waktu: "Sesi III (10.45 - 12.15)", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
+                { id: "xi2", title: "Bahasa Jepang", waktu: "Sesi IV (12.30 - 14.00)", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" }
+            ],
+            "XII": [
+                { id: "xii1", title: "Matematika", waktu: "Sesi I (07.30 - 09.30)", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
+                { id: "xii2", title: "Prkdk", waktu: "Sesi II (10.00 - 12.00)", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" }
+            ]
+        },
+        "2026-09-10": {
+            "X": [
+                { id: "x1", title: "Penjasorkes", waktu: "Sesi I (07.15 - 08.45)", link: "https://forms.gle/VqNrnBr3xqCtMoWeA" },
+                { id: "x2", title: "Sejarah Indonesia", waktu: "Sesi II (09.00 - 10.30)", link: "https://forms.gle/jWMXDYgwzfTGkmNW8" }
+            ],
+            "XI": [
+                { id: "xi1", title: "Penjasorkes", waktu: "Sesi III (10.45 - 12.15)", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
+                { id: "xi2", title: "Sejarah Indonesia", waktu: "Sesi IV (12.30 - 14.00)", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+            ],
+            "XII": [
+                { id: "xii1", title: "Bahasa Inggris", waktu: "Sesi I (07.30 - 09.30)", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
+                { id: "xii2", title: "Konsentrasi Kejuruan XII", waktu: "Sesi II (10.00 - 12.00)", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+            ]
+        },
+        "2026-09-11": {
+            "X": [
+                { id: "x1", title: "IPAS", waktu: "Sesi I (07.10 - 08.20)", link: "https://forms.gle/ikRek8PnFQqWweHh7" },
+                { id: "x2", title: "Dasar Program Keahlian", waktu: "Sesi II (08.50 - 10.00)", link: "https://forms.gle/GFV9bwXMv1G3gXRm9" }
+            ],
+            "XI": [
+                { id: "xi1", title: "Projek Kewirausahaan", waktu: "Sesi III (10.30 - 11.40)", link: "https://forms.gle/A7CBP9NwJc2MZAY17" },
+                { id: "xi2", title: "Mapel Pilihan", waktu: "Sesi IV (12.30 - 13.40)", link: "https://forms.gle/HG3RRTVgxcwJLZ1C6" }
+            ],
+            "XII": []
+        },
+        "2026-09-14": {
+            "X": [
+                { id: "x1", title: "Bahasa Inggris X", waktu: "Sesi I (07.15 - 08.45)", link: "https://forms.gle/Eezv1QYCj5SNi96S7" },
+                { id: "x2", title: "Informatika & KKA X", waktu: "Sesi II (09.00 - 10.30)", link: "https://forms.gle/TmEHtTbppR6kGpTb9" }
+            ],
+            "XI": [
+                { id: "xi1", title: "Bahasa Inggris XI", waktu: "Sesi III (10.45 - 12.15)", link: "https://forms.gle/h2Ary1HHNyYAhhDNA" },
+                { id: "xi2", title: "Konsentrasi Kejuruan XI (DKV/Animasi/Logam/Kulit/Kayu/Keramik/Tekstil)", waktu: "Sesi IV (12.30 - 14.00)", link: "https://forms.gle/m4NqqyHKUYJcV5sz7" }
+            ],
+            "XII": []
+        }
+    };
 
     let wakeLock = null;
 
@@ -373,32 +402,63 @@
         return "K5-" + String(hashCode).padStart(4, '0');
     }
 
-    function renderMenuSchedule() {
+    function setTanggalOtomatisHariIni() {
         const now = new Date();
-        const menitSekarang = (now.getHours() * 60) + now.getMinutes();
+        const yyyy = now.getFullYear();
+        const mm = String(now.getMonth() + 1).padStart(2, '0');
+        const dd = String(now.getDate()).padStart(2, '0');
+        const todayStr = `${yyyy}-${mm}-${dd}`;
 
-        // Kelas X: 07.15 - 10.40
-        const kXStart = (7 * 60) + 15;
-        const kXEnd = (10 * 60) + 40;
-
-        // Kelas XI: 10.45 - 14.10
-        const kXIStart = (10 * 60) + 45;
-        const kXIEnd = (14 * 60) + 10;
-
-        const secX = document.getElementById('kelasXSection');
-        const secXI = document.getElementById('kelasXISection');
-        const secNo = document.getElementById('noScheduleSection');
-
-        secX.style.display = 'none';
-        secXI.style.display = 'none';
-        secNo.style.display = 'none';
-
-        if (menitSekarang >= kXStart && menitSekarang <= kXEnd) {
-            secX.style.display = 'block';
-        } else if (menitSekarang >= kXIStart && menitSekarang <= kXIEnd) {
-            secXI.style.display = 'block';
+        const selectEl = document.getElementById('selectTanggal');
+        if (jadwalUjian[todayStr]) {
+            selectEl.value = todayStr;
         } else {
-            secNo.style.display = 'block';
+            selectEl.value = "2026-09-07"; // Fallback ke hari pertama ujian
+        }
+    }
+
+    function renderMenuSchedule() {
+        const selectedTanggal = document.getElementById('selectTanggal').value;
+        const container = document.getElementById('menuListContainer');
+        container.innerHTML = '';
+
+        const dataHariIni = jadwalUjian[selectedTanggal];
+
+        if (!dataHariIni) {
+            container.innerHTML = `
+                <div class="no-schedule-msg">
+                    Tidak ada jadwal ujian pada tanggal yang dipilih!
+                </div>
+            `;
+            return;
+        }
+
+        let htmlContent = '';
+
+        ['X', 'XI', 'XII'].forEach(kelas => {
+            if (dataHariIni[kelas] && dataHariIni[kelas].length > 0) {
+                htmlContent += `<div style="text-align:left; font-weight:bold; color:#0d47a1; margin:12px 0 6px 0; font-size:13px; border-bottom:1px solid #cbd5e1; padding-bottom:3px;">--- KELAS ${kelas} ---</div>`;
+                
+                dataHariIni[kelas].forEach(item => {
+                    htmlContent += `
+                        <div class="item-card">
+                            <div class="item-title">${item.title}</div>
+                            <div class="item-info">Waktu: ${item.waktu}</div>
+                            <button onclick="bukaGForm('${item.link}')" class="btn-gform">Kerjakan Soal</button>
+                        </div>
+                    `;
+                });
+            }
+        });
+
+        if (htmlContent === '') {
+            container.innerHTML = `
+                <div class="no-schedule-msg">
+                    Tidak ada jadwal ujian untuk tanggal ini.
+                </div>
+            `;
+        } else {
+            container.innerHTML = htmlContent;
         }
     }
 
@@ -411,6 +471,7 @@
             document.getElementById('loginSection').style.display = 'block';
             releaseWakeLock();
         } else if (target === 'menu') {
+            setTanggalOtomatisHariIni();
             renderMenuSchedule();
             document.getElementById('menuSection').style.display = 'block';
         }
